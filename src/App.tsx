@@ -1,5 +1,4 @@
-function App() {
-    return <div className="min-h-screen text-center">Hello World</div>;
-}
-
+const App = () => {
+    return <div className="min-h-screen">Hello World</div>;
+};
 export default App;
