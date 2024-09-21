@@ -1,3 +1,4 @@
+import { cn } from "@/lib/utils";
 import {
     Card,
     CardContent,
@@ -7,9 +8,9 @@ import {
 } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 
-const SummaryCard = () => {
+const SummaryCard = ({ className }: { className: string }) => {
     return (
-        <Card>
+        <Card className={cn("", className)}>
             <CardHeader>
                 <CardTitle>Summary</CardTitle>
             </CardHeader>
@@ -17,7 +18,7 @@ const SummaryCard = () => {
                 <p>Great</p>
             </CardContent>
             <CardFooter>
-                <Button>Continue</Button>
+                <Button className="select-none">Continue</Button>
             </CardFooter>
         </Card>
     );

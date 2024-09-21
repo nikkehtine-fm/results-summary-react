@@ -7,6 +7,9 @@ export default {
             sans: ['"Hanken Grotesk Variable"', "system-ui", "sans-serif"],
         },
         extend: {
+            fontSize: {
+                base: "18px",
+            },
             borderRadius: {
                 lg: "var(--radius)",
                 md: "calc(var(--radius) - 2px)",
@@ -53,6 +56,23 @@ export default {
                     4: "hsl(var(--chart-4))",
                     5: "hsl(var(--chart-5))",
                 },
+                fm: {
+                    red: "hsl(0, 100%, 67%)",
+                    yellow: "hsl(39, 100%, 56%)",
+                    green: "hsl(166, 100%, 37%)",
+                    blue: "hsl(234, 85%, 45%)",
+                },
+                back: {
+                    slate: "hsl(252, 100%, 67%)",
+                    royal: "hsl(241, 81%, 54%)",
+                },
+                circle: {
+                    violet: "hsla(256, 72%, 46%, 1)",
+                    persian: "hsla(241, 72%, 46%, 0)",
+                },
+                pale: "hsl(221, 100%, 96%)",
+                lavender: "hsl(241, 100%, 89%)",
+                grue: "hsl(224, 30%, 27%)",
             },
         },
     },
