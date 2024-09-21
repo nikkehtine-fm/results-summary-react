@@ -10,7 +10,7 @@ import { Button } from "@/components/ui/button";
 
 const SummaryCard = ({ className }: { className: string }) => {
     return (
-        <Card className={cn("", className)}>
+        <Card className={cn("text-summary", className)}>
             <CardHeader>
                 <CardTitle>Summary</CardTitle>
             </CardHeader>
@@ -18,7 +18,9 @@ const SummaryCard = ({ className }: { className: string }) => {
                 <p>Great</p>
             </CardContent>
             <CardFooter>
-                <Button className="select-none">Continue</Button>
+                <Button className="text-summary text-primary-foreground">
+                    Continue
+                </Button>
             </CardFooter>
         </Card>
     );

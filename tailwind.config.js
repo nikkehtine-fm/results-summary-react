@@ -8,7 +8,7 @@ export default {
         },
         extend: {
             fontSize: {
-                base: "18px",
+                summary: "18px",
             },
             borderRadius: {
                 lg: "var(--radius)",

@@ -7,7 +7,7 @@ const App = () => {
 
     return (
         <div className="text-foreground grid min-h-screen place-items-center font-sans text-base">
-            <div className="flex h-full w-full flex-col lg:h-fit lg:w-[720px] lg:flex-row lg:rounded-3xl lg:shadow-2xl">
+            <div className="flex h-full w-full flex-col lg:h-fit lg:w-[660px] lg:flex-row lg:rounded-3xl lg:shadow-2xl">
                 <ResultCard className={cardStyles} />
                 <SummaryCard className={cardStyles} />
             </div>

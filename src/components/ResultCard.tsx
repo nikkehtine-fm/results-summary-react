@@ -6,25 +6,28 @@ import {
     CardHeader,
     CardTitle,
 } from "@/components/ui/card";
+import { Circle } from "@/components/ResultCircle";
 
 const ResultCard = ({ className }: { className: string }) => {
     return (
         <Card
             className={cn(
-                "rounded-t-none bg-indigo-600 text-center text-white lg:rounded-3xl",
+                "from-back-slate to-back-royal rounded-t-none bg-gradient-to-b text-center text-white lg:rounded-3xl",
                 className
             )}
         >
             <CardHeader>
                 <CardTitle className="text-lavender">Your Result</CardTitle>
             </CardHeader>
-            <CardContent>
-                <p>76 of 100</p>
+            <CardContent className="flex items-center justify-center">
+                <Circle />
             </CardContent>
-            <CardFooter className="text-lavender">
-                <h1 className="text-3xl font-bold text-white">Great</h1>
-                You scored higher than 65% of the people who have taken these
-                tests.
+            <CardFooter>
+                <h1 className="mb-4 text-3xl font-bold text-white">Great</h1>
+                <p className="text-lavender px-4 leading-6">
+                    You scored higher than 65% of the people who have taken
+                    these tests.
+                </p>
             </CardFooter>
         </Card>
     );
