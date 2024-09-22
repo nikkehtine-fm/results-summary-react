@@ -15,6 +15,7 @@ export default {
                 md: "calc(var(--radius) - 2px)",
                 sm: "calc(var(--radius) - 4px)",
             },
+
             colors: {
                 background: "hsl(var(--background))",
                 foreground: "hsl(var(--foreground))",
@@ -77,4 +78,5 @@ export default {
         },
     },
     plugins: [require("tailwindcss-animate")],
+    safelist: [{ pattern: /(bg|text|border)-fm-(red|yellow|green|blue)/ }],
 };
