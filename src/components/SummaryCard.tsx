@@ -19,8 +19,8 @@ const SummaryCard = ({ className }: { className: string }) => {
                 <CardTitle>Summary</CardTitle>
             </CardHeader>
             <CardContent className="flex flex-col gap-3">
-                {data.map((entry) => (
-                    <SummaryScoreItem {...entry} />
+                {data.map((entry, i) => (
+                    <SummaryScoreItem {...entry} i={i} />
                 ))}
             </CardContent>
             <CardFooter>

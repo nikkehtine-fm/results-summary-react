@@ -1,13 +1,21 @@
+import { useEffect, useState } from "react";
 import { cn } from "@/lib/utils";
 import { Progress } from "@/components/ui/progress";
 import { DataItem } from "@/lib/store";
 
-const SummaryScoreItem = (props: DataItem) => {
-    const { category, score, icon, color } = props;
+const SummaryScoreItem = (props: DataItem & { i: number }) => {
+    const { category, score, icon, color, i } = props;
+
+    const [progress, setProgress] = useState(0);
+    useEffect(() => {
+        const timer = setTimeout(() => setProgress(score), 300 + i * 50);
+        return () => clearTimeout(timer);
+    });
+
     return (
         <div className="relative h-fit">
             <Progress
-                value={score}
+                value={progress}
                 className="absolute left-0 top-0 z-0 h-full rounded-lg"
                 color={color}
             />
@@ -25,8 +33,9 @@ const SummaryScoreItem = (props: DataItem) => {
                     />
                     {category}
                 </div>
-                <div className="flex flex-row gap-1 font-bold text-foreground/50">
-                    <span className="text-foreground">{score}</span> /{" "}
+                <div className="flex flex-row font-bold text-foreground/50">
+                    <span className="text-foreground">{score}</span>
+                    <span className="pl-1.5 pr-1">/</span>
                     <span>100</span>
                 </div>
             </div>
