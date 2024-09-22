@@ -12,7 +12,7 @@ const ResultCard = ({ className }: { className: string }) => {
     return (
         <Card
             className={cn(
-                "from-back-slate to-back-royal rounded-t-none bg-gradient-to-b text-center text-white lg:rounded-3xl",
+                "rounded-t-none bg-gradient-to-b from-back-slate to-back-royal text-center text-white md:rounded-3xl",
                 className
             )}
         >
@@ -24,7 +24,7 @@ const ResultCard = ({ className }: { className: string }) => {
             </CardContent>
             <CardFooter>
                 <h1 className="mb-4 text-3xl font-bold text-white">Great</h1>
-                <p className="text-lavender px-4 leading-6">
+                <p className="px-4 leading-6 text-lavender">
                     You scored higher than 65% of the people who have taken
                     these tests.
                 </p>
